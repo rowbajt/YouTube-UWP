@@ -1,0 +1,70 @@
+﻿<Page
+    x:Class="YouTube_UWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:YouTube_UWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loading="Page_Loading">
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton Icon="Accept" Label="AppBarButton"/>
+            <AppBarButton Icon="Cancel" Label="AppBarButton"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+    <Page.TopAppBar>
+        <CommandBar>
+            <AppBarButton x:Name="AddFriendButton" Icon="AddFriend" Label="Add As Friend" Click="AddFriendButton_Click"/>
+            <AppBarButton x:Name="UnfriendButton" Icon="Remove" Label="Unfriend" Click="UnfriendButton_Click_1"/>
+            <AppBarButton x:Name="LeaveCommentButton" Icon="Comment" Label="Leave Comment"/>
+            <AppBarSeparator/>
+            <AppBarButton x:Name="LikePageButton" Icon="Emoji" Label="Like This Page"/>
+        </CommandBar>
+    </Page.TopAppBar>
+    <Grid Margin="0" Background="White" Width="1920" Height="1080">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="479*"/>
+            <ColumnDefinition Width="481*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="478*"/>
+            <RowDefinition Height="64*"/>
+            <RowDefinition Height="491*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="186" Margin="7,14,0,0" Grid.Row="1">
+            <Run Text="User Profiles: TheCod3r"/>
+            <LineBreak/>
+            <Run Foreground="Red" Text="Forum Administrator"/>
+        </TextBlock>
+        <Image Height="100" VerticalAlignment="Top" Margin="7,69,851,0" Grid.Row="1" MinWidth="80" MinHeight="80" Source="Assets/pic.jpg" />
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="112,71,0,0" Grid.Row="1" Height="98" Width="107">
+            <Run FontWeight="Bold" Text="Real Name:"/>
+            <LineBreak/>
+            <Run Text="Robert Heiss"/>
+            <LineBreak/>
+            <Run FontWeight="Bold" Text="Email Address:"/>
+            <LineBreak/>
+            <Run Text="r_h@this.com"/>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="222" Margin="10,14,0,0" Grid.Column="1" Grid.Row="1">
+            <Run Text="Tagline: I'm a C# Programmer"/>
+            <LineBreak/>
+            <Run Foreground="Red" Text="User Bio"/>
+        </TextBlock>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Height="458" Margin="10,71,0,0" Grid.Row="1" TextWrapping="Wrap" Text="I'm a 41 year old software programmer working with Visual Studio 2-17. I love doing this while recording them for Youtube." VerticalAlignment="Top" Width="942" Grid.RowSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="222" Margin="10,10,0,0" Grid.Column="1" Grid.Row="2">
+            <Run Text="Friend: 554"/>
+            <LineBreak/>
+            <Run Foreground="Red" Text="Recent Profile Comments"/>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="222" Margin="10,10,0,0" Grid.Row="2">
+            <Run Text="Post Count: 5532"/>
+            <LineBreak/>
+            <Run Foreground="Red" Text="Recent Posts"/>
+        </TextBlock>
+    </Grid>
+</Page>
